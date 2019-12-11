@@ -9,11 +9,11 @@
 #include <math.h>
 
 int numgen();
-
+int ran = 0;
 void main(void)
 {
 	srand(time(NULL));
-	int x,y,z,i,h,g,k,choice=0, ran = 0, be = 0, watermelon = 0, choose, path, pack, guard, keep, bag, num1, answer = 64, num2;
+	int x,y,z,i,h,g,k,choice=0, be = 0, watermelon = 0, choose, path, pack, guard, keep, bag, num1, answer = 64, num2;
 	char name[256];
 	char ba[256];
 	char story[256];
@@ -145,13 +145,15 @@ void main(void)
 								puts("You chose incorectly, try again. Here's a hint... I respond better when your more forward.");
 							}
 							
+							
 							else if(choice == 2)
 							{
 								puts("About a year ago, I came upon a wishing well and approached it with the few coins I had left. I wished to be turned in to a great husky.");
 								puts("Tell me do you know a spell to turn me into a dog?\n 0 for yes or 1 for no.");
 								scanf("%d",&be);
 
-								if(be == 0){
+								if(be == 0)
+								{
 									puts("Then do it! Change me!\n You tell her it has a 50 percent chance of working, she stands hopefull it will work.");
 									puts("You cast the spell....... ");
 									int numgen();
@@ -168,6 +170,7 @@ void main(void)
 									puts("Then I do not need you.");
 								}
 							}
+							
 							
 							else if(choice == 3)
 							{
@@ -322,14 +325,16 @@ void main(void)
 											{
 												puts("Got to admit that one is a bit tricky, maybe next time. For now you're not worthy.");
 											}
+									}
 									
 
 									else if(watermelon != 30)
 									{
 										puts("Just get out.");
 									}
-							}
-							else if(choice == 4)
+									
+							
+									else if(choice == 4)
 							{
 								puts("If you're just going to stand there I'll put you to work. Read me my favorite story..");
 								puts("She hands you a book.\n");
